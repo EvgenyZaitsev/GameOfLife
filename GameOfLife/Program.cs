@@ -10,9 +10,11 @@ namespace GameOfLife
             var gb = new Gameboard();
             var path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             var currentTime = DateTime.Now.ToString("dd-MM-yy_HH-mm-ss");
-            bool isRandom = true;
-            if (isRandom)
-                gb.CreateData(10, 10, 0.42);
+            Console.WriteLine("Press \"r\", if you want to create random start gameboard.");
+            Console.WriteLine("In other case it will be taken from \"Test.txt\"");
+            var isRandom = Console.Read();
+            if (isRandom == 'r')
+                gb.CreateData(10, 10, 0.5);
             else
                 gb.ReadData(path + @"\Test.txt");
             var game = new Game(gb);
