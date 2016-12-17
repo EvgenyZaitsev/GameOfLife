@@ -1,0 +1,5 @@
+Iteration 0.
+
+Iteration 1.
+
+This gameboard already happened on iteration 0.
